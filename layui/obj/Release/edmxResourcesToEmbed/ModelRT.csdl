@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="XGDADBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CCM_Weight_His">
+    <Key>
+      <PropertyRef Name="CCMID" />
+    </Key>
+    <Property Name="CCMID" Type="Int32" Nullable="false" />
+    <Property Name="MeasureTime" Type="DateTime" Precision="3" />
+    <Property Name="LadleWeight" Type="Double" />
+    <Property Name="TundishWeight" Type="Double" />
+  </EntityType>
+  <EntityContainer Name="XGDADBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CCM_Weight_His" EntityType="Self.CCM_Weight_His" />
+  </EntityContainer>
+</Schema>

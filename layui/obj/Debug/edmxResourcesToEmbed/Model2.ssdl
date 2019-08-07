@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="10.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CCURRENTSHIFTINFO">
+    <Key>
+      <PropertyRef Name="L3INDEX" />
+    </Key>
+    <Property Name="GUID" Type="varchar2" MaxLength="250" />
+    <Property Name="NAME" Type="varchar2" MaxLength="250" />
+    <Property Name="L3INDEX" Type="varchar2" MaxLength="250" Nullable="false" />
+    <Property Name="SHIFTTYPE" Type="varchar2" MaxLength="250" />
+    <Property Name="SHIFTID" Type="number" Precision="5" Scale="0" />
+    <Property Name="TEAMID" Type="number" Precision="5" Scale="0" />
+    <Property Name="UNITTYPEID" Type="varchar2" MaxLength="250" />
+    <Property Name="UNITID" Type="varchar2" MaxLength="250" />
+    <Property Name="CURRENTID" Type="number" Precision="5" Scale="0" />
+    <Property Name="BEGINPROCESSTIME" Type="date" />
+    <Property Name="ENDPROCESSTIME" Type="date" />
+    <Property Name="SHIFTWARNING" Type="varchar2" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="CSCRAP_OUTPUT_LOG">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="varchar2" MaxLength="250" Nullable="false" />
+    <Property Name="NAME" Type="varchar2" MaxLength="250" />
+    <Property Name="NO" Type="varchar2" MaxLength="250" />
+    <Property Name="MATERIALTYPE" Type="varchar2" MaxLength="250" />
+    <Property Name="MATERIALID" Type="varchar2" MaxLength="250" />
+    <Property Name="LOGDATE" Type="date" />
+    <Property Name="AMOUNT" Type="number" Precision="10" Scale="3" />
+    <Property Name="TYPE" Type="number" Precision="10" Scale="0" />
+    <Property Name="REASON" Type="varchar2" MaxLength="250" />
+    <Property Name="TARGET" Type="varchar2" MaxLength="250" />
+    <Property Name="STOREAREAID" Type="varchar2" MaxLength="250" />
+    <Property Name="OPERATOR" Type="varchar2" MaxLength="250" />
+    <Property Name="SHIFT" Type="varchar2" MaxLength="250" />
+    <Property Name="TEAM" Type="varchar2" MaxLength="250" />
+    <Property Name="SCRAP_SLOT_ID" Type="varchar2" MaxLength="250" />
+    <Property Name="CAR_ID" Type="varchar2" MaxLength="250" />
+    <Property Name="CAR_TYPE" Type="varchar2" MaxLength="250" />
+    <Property Name="NET_WEIGHT" Type="number" Precision="10" Scale="3" />
+    <Property Name="GROSS_WEIGHT" Type="number" Precision="10" Scale="3" />
+    <Property Name="TARE_WEIGHT" Type="number" Precision="10" Scale="3" />
+    <Property Name="IRON_FLAG" Type="number" Precision="10" Scale="0" />
+    <Property Name="HEATID" Type="varchar2" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="CSCRAPOUTSTOREDETAIL">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="varchar2" MaxLength="250" Nullable="false" />
+    <Property Name="NAME" Type="varchar2" MaxLength="250" />
+    <Property Name="SCRAP_SLOT_ID" Type="varchar2" MaxLength="250" />
+    <Property Name="MATERIAL" Type="varchar2" MaxLength="250" />
+    <Property Name="MATERIAL_CODE" Type="varchar2" MaxLength="250" />
+    <Property Name="AMOUNT" Type="varchar2" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="TS_USER">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="USERID" Type="varchar2" MaxLength="50" />
+    <Property Name="PASSWORD" Type="varchar2" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="CCURRENTSHIFTINFO" EntityType="Self.CCURRENTSHIFTINFO" Schema="XGMES" store:Type="Tables" />
+    <EntitySet Name="CSCRAP_OUTPUT_LOG" EntityType="Self.CSCRAP_OUTPUT_LOG" Schema="XGMES" store:Type="Tables" />
+    <EntitySet Name="CSCRAPOUTSTOREDETAIL" EntityType="Self.CSCRAPOUTSTOREDETAIL" Schema="XGMES" store:Type="Tables" />
+    <EntitySet Name="TS_USER" EntityType="Self.TS_USER" Schema="XGMES" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

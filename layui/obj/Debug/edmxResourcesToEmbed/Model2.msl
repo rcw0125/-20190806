@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="CCURRENTSHIFTINFO">
+      <EntityTypeMapping TypeName="Model.CCURRENTSHIFTINFO">
+        <MappingFragment StoreEntitySet="CCURRENTSHIFTINFO">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="L3INDEX" ColumnName="L3INDEX" />
+          <ScalarProperty Name="SHIFTTYPE" ColumnName="SHIFTTYPE" />
+          <ScalarProperty Name="SHIFTID" ColumnName="SHIFTID" />
+          <ScalarProperty Name="TEAMID" ColumnName="TEAMID" />
+          <ScalarProperty Name="UNITTYPEID" ColumnName="UNITTYPEID" />
+          <ScalarProperty Name="UNITID" ColumnName="UNITID" />
+          <ScalarProperty Name="CURRENTID" ColumnName="CURRENTID" />
+          <ScalarProperty Name="BEGINPROCESSTIME" ColumnName="BEGINPROCESSTIME" />
+          <ScalarProperty Name="ENDPROCESSTIME" ColumnName="ENDPROCESSTIME" />
+          <ScalarProperty Name="SHIFTWARNING" ColumnName="SHIFTWARNING" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CSCRAP_OUTPUT_LOG">
+      <EntityTypeMapping TypeName="Model.CSCRAP_OUTPUT_LOG">
+        <MappingFragment StoreEntitySet="CSCRAP_OUTPUT_LOG">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="NO" ColumnName="NO" />
+          <ScalarProperty Name="MATERIALTYPE" ColumnName="MATERIALTYPE" />
+          <ScalarProperty Name="MATERIALID" ColumnName="MATERIALID" />
+          <ScalarProperty Name="LOGDATE" ColumnName="LOGDATE" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="REASON" ColumnName="REASON" />
+          <ScalarProperty Name="TARGET" ColumnName="TARGET" />
+          <ScalarProperty Name="STOREAREAID" ColumnName="STOREAREAID" />
+          <ScalarProperty Name="OPERATOR" ColumnName="OPERATOR" />
+          <ScalarProperty Name="SHIFT" ColumnName="SHIFT" />
+          <ScalarProperty Name="TEAM" ColumnName="TEAM" />
+          <ScalarProperty Name="SCRAP_SLOT_ID" ColumnName="SCRAP_SLOT_ID" />
+          <ScalarProperty Name="CAR_ID" ColumnName="CAR_ID" />
+          <ScalarProperty Name="CAR_TYPE" ColumnName="CAR_TYPE" />
+          <ScalarProperty Name="NET_WEIGHT" ColumnName="NET_WEIGHT" />
+          <ScalarProperty Name="GROSS_WEIGHT" ColumnName="GROSS_WEIGHT" />
+          <ScalarProperty Name="TARE_WEIGHT" ColumnName="TARE_WEIGHT" />
+          <ScalarProperty Name="IRON_FLAG" ColumnName="IRON_FLAG" />
+          <ScalarProperty Name="HEATID" ColumnName="HEATID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CSCRAPOUTSTOREDETAIL">
+      <EntityTypeMapping TypeName="Model.CSCRAPOUTSTOREDETAIL">
+        <MappingFragment StoreEntitySet="CSCRAPOUTSTOREDETAIL">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="SCRAP_SLOT_ID" ColumnName="SCRAP_SLOT_ID" />
+          <ScalarProperty Name="MATERIAL" ColumnName="MATERIAL" />
+          <ScalarProperty Name="MATERIAL_CODE" ColumnName="MATERIAL_CODE" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_USER">
+      <EntityTypeMapping TypeName="Model.TS_USER">
+        <MappingFragment StoreEntitySet="TS_USER">
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

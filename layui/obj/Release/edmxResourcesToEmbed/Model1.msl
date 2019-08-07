@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VehIcModelStoreContainer" CdmEntityContainer="VehIcEntities">
+    <EntitySetMapping Name="QC_Qyxx">
+      <EntityTypeMapping TypeName="VehIcModel.QC_Qyxx">
+        <MappingFragment StoreEntitySet="QC_Qyxx">
+          <ScalarProperty Name="Qyxxid" ColumnName="Qyxxid" />
+          <ScalarProperty Name="cph" ColumnName="cph" />
+          <ScalarProperty Name="matname" ColumnName="matname" />
+          <ScalarProperty Name="custname" ColumnName="custname" />
+          <ScalarProperty Name="chedao" ColumnName="chedao" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="qyds" ColumnName="qyds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QC_YCCX">
+      <EntityTypeMapping TypeName="VehIcModel.QC_YCCX">
+        <MappingFragment StoreEntitySet="QC_YCCX">
+          <ScalarProperty Name="rq" ColumnName="rq" />
+          <ScalarProperty Name="leixing" ColumnName="leixing" />
+          <ScalarProperty Name="ZYDANHAO" ColumnName="ZYDANHAO" />
+          <ScalarProperty Name="CHESHU" ColumnName="CHESHU" />
+          <ScalarProperty Name="CHECKVAL" ColumnName="CHECKVAL" />
+          <ScalarProperty Name="JYBZ" ColumnName="JYBZ" />
+          <ScalarProperty Name="ITEMCODE" ColumnName="ITEMCODE" />
+          <ScalarProperty Name="ITEMNAME" ColumnName="ITEMNAME" />
+          <ScalarProperty Name="CUSTCODE" ColumnName="CUSTCODE" />
+          <ScalarProperty Name="MATCODE" ColumnName="MATCODE" />
+          <ScalarProperty Name="CUSTNAME" ColumnName="CUSTNAME" />
+          <ScalarProperty Name="MATNAME" ColumnName="MATNAME" />
+          <ScalarProperty Name="RIQI" ColumnName="RIQI" />
+          <ScalarProperty Name="SJSL" ColumnName="SJSL" />
+          <ScalarProperty Name="SAMPLE_YCCX_ID" ColumnName="SAMPLE_YCCX_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

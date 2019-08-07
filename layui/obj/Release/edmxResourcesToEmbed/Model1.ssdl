@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VehIcModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="QC_Qyxx">
+    <Key>
+      <PropertyRef Name="Qyxxid" />
+    </Key>
+    <Property Name="Qyxxid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cph" Type="varchar" MaxLength="400" />
+    <Property Name="matname" Type="varchar" MaxLength="400" />
+    <Property Name="custname" Type="varchar" MaxLength="400" />
+    <Property Name="chedao" Type="varchar" MaxLength="400" />
+    <Property Name="state" Type="int" Nullable="false" />
+    <Property Name="qyds" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“VehIc.dbo.QC_YCCX”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="QC_YCCX">
+    <Key>
+      <PropertyRef Name="SAMPLE_YCCX_ID" />
+    </Key>
+    <Property Name="SAMPLE_YCCX_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SJSL" Type="float" />
+    <Property Name="RIQI" Type="datetime" />
+    <Property Name="MATNAME" Type="varchar" MaxLength="400" />
+    <Property Name="CUSTNAME" Type="varchar" MaxLength="400" />
+    <Property Name="MATCODE" Type="varchar" MaxLength="400" />
+    <Property Name="CUSTCODE" Type="varchar" MaxLength="400" />
+    <Property Name="ITEMNAME" Type="varchar" MaxLength="400" />
+    <Property Name="ITEMCODE" Type="varchar" MaxLength="400" />
+    <Property Name="JYBZ" Type="varchar" MaxLength="400" />
+    <Property Name="CHECKVAL" Type="float" />
+    <Property Name="CHESHU" Type="int" />
+    <Property Name="ZYDANHAO" Type="varchar" MaxLength="400" />
+    <Property Name="leixing" Type="varchar" MaxLength="400" />
+    <Property Name="rq" Type="varchar" MaxLength="400" />
+  </EntityType>
+  <EntityContainer Name="VehIcModelStoreContainer">
+    <EntitySet Name="QC_Qyxx" EntityType="Self.QC_Qyxx" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QC_YCCX" EntityType="Self.QC_YCCX" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [QC_YCCX].[SAMPLE_YCCX_ID] AS [SAMPLE_YCCX_ID], 
+    [QC_YCCX].[SJSL] AS [SJSL], 
+    [QC_YCCX].[RIQI] AS [RIQI], 
+    [QC_YCCX].[MATNAME] AS [MATNAME], 
+    [QC_YCCX].[CUSTNAME] AS [CUSTNAME], 
+    [QC_YCCX].[MATCODE] AS [MATCODE], 
+    [QC_YCCX].[CUSTCODE] AS [CUSTCODE], 
+    [QC_YCCX].[ITEMNAME] AS [ITEMNAME], 
+    [QC_YCCX].[ITEMCODE] AS [ITEMCODE], 
+    [QC_YCCX].[JYBZ] AS [JYBZ], 
+    [QC_YCCX].[CHECKVAL] AS [CHECKVAL], 
+    [QC_YCCX].[CHESHU] AS [CHESHU], 
+    [QC_YCCX].[ZYDANHAO] AS [ZYDANHAO], 
+    [QC_YCCX].[leixing] AS [leixing], 
+    [QC_YCCX].[rq] AS [rq]
+    FROM [dbo].[QC_YCCX] AS [QC_YCCX]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

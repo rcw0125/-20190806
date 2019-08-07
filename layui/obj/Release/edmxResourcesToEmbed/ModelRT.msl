@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="XGDADBModelStoreContainer" CdmEntityContainer="XGDADBEntities">
+    <EntitySetMapping Name="CCM_Weight_His">
+      <EntityTypeMapping TypeName="XGDADBModel.CCM_Weight_His">
+        <MappingFragment StoreEntitySet="CCM_Weight_His">
+          <ScalarProperty Name="CCMID" ColumnName="CCMID" />
+          <ScalarProperty Name="MeasureTime" ColumnName="MeasureTime" />
+          <ScalarProperty Name="LadleWeight" ColumnName="LadleWeight" />
+          <ScalarProperty Name="TundishWeight" ColumnName="TundishWeight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

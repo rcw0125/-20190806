@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CCURRENTSHIFTINFO">
+    <Key>
+      <PropertyRef Name="L3INDEX" />
+    </Key>
+    <Property Name="GUID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="L3INDEX" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SHIFTTYPE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SHIFTID" Type="Int16" />
+    <Property Name="TEAMID" Type="Int16" />
+    <Property Name="UNITTYPEID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="UNITID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CURRENTID" Type="Int16" />
+    <Property Name="BEGINPROCESSTIME" Type="DateTime" />
+    <Property Name="ENDPROCESSTIME" Type="DateTime" />
+    <Property Name="SHIFTWARNING" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CSCRAP_OUTPUT_LOG">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="NO" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="MATERIALTYPE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="MATERIALID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="LOGDATE" Type="DateTime" />
+    <Property Name="AMOUNT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="TYPE" Type="Int32" />
+    <Property Name="REASON" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TARGET" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="STOREAREAID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="OPERATOR" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SHIFT" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TEAM" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SCRAP_SLOT_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CAR_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CAR_TYPE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="NET_WEIGHT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="GROSS_WEIGHT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="TARE_WEIGHT" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="IRON_FLAG" Type="Int32" />
+    <Property Name="HEATID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CSCRAPOUTSTOREDETAIL">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SCRAP_SLOT_ID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="MATERIAL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="MATERIAL_CODE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="AMOUNT" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CCURRENTSHIFTINFO" EntityType="Self.CCURRENTSHIFTINFO" />
+    <EntitySet Name="CSCRAP_OUTPUT_LOG" EntityType="Self.CSCRAP_OUTPUT_LOG" />
+    <EntitySet Name="CSCRAPOUTSTOREDETAIL" EntityType="Self.CSCRAPOUTSTOREDETAIL" />
+    <EntitySet Name="TS_USER" EntityType="Model.TS_USER" />
+  </EntityContainer>
+  <EntityType Name="TS_USER">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USERID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

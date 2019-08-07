@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VehIcModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="QC_Qyxx">
+    <Key>
+      <PropertyRef Name="Qyxxid" />
+    </Key>
+    <Property Name="Qyxxid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cph" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="matname" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="custname" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="chedao" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="Int32" Nullable="false" />
+    <Property Name="qyds" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="VehIcEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="QC_Qyxx" EntityType="Self.QC_Qyxx" />
+    <EntitySet Name="QC_YCCX" EntityType="VehIcModel.QC_YCCX" />
+  </EntityContainer>
+  <EntityType Name="QC_YCCX">
+    <Key>
+      <PropertyRef Name="SAMPLE_YCCX_ID" />
+    </Key>
+    <Property Name="SAMPLE_YCCX_ID" Type="Int32" Nullable="false" />
+    <Property Name="SJSL" Type="Double" />
+    <Property Name="RIQI" Type="DateTime" Precision="3" />
+    <Property Name="MATNAME" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="CUSTNAME" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="MATCODE" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="CUSTCODE" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="ITEMNAME" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="ITEMCODE" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="JYBZ" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="CHECKVAL" Type="Double" />
+    <Property Name="CHESHU" Type="Int32" />
+    <Property Name="ZYDANHAO" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="leixing" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="rq" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

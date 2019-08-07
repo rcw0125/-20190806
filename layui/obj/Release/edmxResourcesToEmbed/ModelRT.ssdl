@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="XGDADBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“XGDADB.dbo.CCM_Weight_His”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="CCM_Weight_His">
+    <Key>
+      <PropertyRef Name="CCMID" />
+    </Key>
+    <Property Name="CCMID" Type="int" Nullable="false" />
+    <Property Name="MeasureTime" Type="datetime" />
+    <Property Name="LadleWeight" Type="float" />
+    <Property Name="TundishWeight" Type="float" />
+  </EntityType>
+  <EntityContainer Name="XGDADBModelStoreContainer">
+    <EntitySet Name="CCM_Weight_His" EntityType="Self.CCM_Weight_His" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CCM_Weight_His].[CCMID] AS [CCMID], 
+    [CCM_Weight_His].[MeasureTime] AS [MeasureTime], 
+    [CCM_Weight_His].[LadleWeight] AS [LadleWeight], 
+    [CCM_Weight_His].[TundishWeight] AS [TundishWeight]
+    FROM [dbo].[CCM_Weight_His] AS [CCM_Weight_His]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
